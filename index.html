@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO：請替換為實際產品資訊 -->
+  <title>產品名稱｜一句話主標語 - 品牌名稱</title>
+  <meta name="description" content="請填寫 80–120 字的產品描述，包含產品名稱與主要賣點，這段文字會顯示在 Google 搜尋結果。">
+  <meta name="theme-color" content="#2f6f4e">
+  <link rel="canonical" href="https://example.com/">
+
+  <!-- 社群分享預覽（Open Graph） -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="產品名稱｜一句話主標語">
+  <meta property="og:description" content="請填寫社群分享時顯示的產品描述。">
+  <meta property="og:image" content="assets/images/og-image.jpg">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:locale" content="zh_TW">
+
+  <!-- 放入 favicon 檔案後再取消註解 -->
+  <!-- <link rel="icon" href="assets/images/favicon.ico" sizes="any"> -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap">
+
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/sections.css">
+
+  <!-- 停用 JavaScript 時，直接顯示所有進場動畫元素 -->
+  <noscript>
+    <style>
+      .reveal { opacity: 1; transform: none; }
+    </style>
+  </noscript>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要內容</a>
+
+  <!-- ======================================================================
+       Header 固定導覽列
+       需要素材：品牌 Logo（透明底 PNG 或 SVG，寬度 1000px 以上）
+       ====================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <a class="site-logo" href="#top">
+        <!-- 置換為：<img src="assets/images/logo.svg" alt="品牌名稱" width="160" height="40"> -->
+        <span class="site-logo__text">品牌名稱</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="開啟選單">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="主要導覽">
+        <ul class="site-nav__list">
+          <li><a href="#intro">產品介紹</a></li>
+          <li><a href="#features">特點功效</a></li>
+          <li><a href="#ingredients">成分優勢</a></li>
+          <li><a href="#howto">使用方法</a></li>
+          <li><a href="#faq">常見問題</a></li>
+          <li><a href="#contact">聯絡我們</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm site-nav__cta" href="#cta">立即選購</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="nav-backdrop" hidden></div>
+
+  <main id="main">
+
+    <!-- ====================================================================
+         Hero 首屏主視覺
+         需要素材：
+         - 首屏主視覺大圖 1920–2400px（JPG 或 WebP，1–2 張）
+         - 產品正式名稱、主標語、副標語
+         - 三個關鍵賣點短句（各 4–8 字）
+         ==================================================================== -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__bg">
+        <!-- 置換為：<img src="assets/images/hero.jpg" alt="" width="2400" height="1350" fetchpriority="high"> -->
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow">副標語／品牌訴求一句話</p>
+          <h1 class="hero__title" id="hero-title">產品正式名稱</h1>
+          <p class="hero__subtitle">
+            主標語：用一句話說明產品最核心的價值，建議 15–25 字，
+            讓訪客三秒內理解這是什麼產品、能解決什麼問題。
+          </p>
+
+          <ul class="hero__points">
+            <li>關鍵賣點一</li>
+            <li>關鍵賣點二</li>
+            <li>關鍵賣點三</li>
+          </ul>
+
+          <div class="btn-group">
+            <a class="btn btn--accent" href="#cta">立即選購</a>
+            <a class="btn btn--outline btn--on-dark" href="#intro">了解更多</a>
+          </div>
+        </div>
+
+        <div class="hero__media">
+          <div class="media-placeholder media-placeholder--tall">
+            <span class="media-placeholder__label">產品主視覺照</span>
+            <span class="media-placeholder__spec">寬 1200–1600px／透明底 PNG 優先</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="note">
+          <span class="note__title">此區塊需要的內容</span>
+          <ul>
+            <li>首屏主視覺大圖 1–2 張，寬度 1920–2400px，JPG 或 WebP</li>
+            <li>產品單獨展示照 1 張，寬度 1200–1600px，透明底 PNG 優先</li>
+            <li>產品正式名稱（全形不超過 15 字為佳）</li>
+            <li>主標語 1 句（15–25 字）、副標語 1 句（10–15 字）</li>
+            <li>三個關鍵賣點短句，各 4–8 字，例如「腸胃保健」「毛澤光亮」「強健關節」</li>
+            <li>CTA 按鈕文字與連結目標（購買頁、LINE 或電話）</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         產品簡介
+         需要素材：50–100 字產品介紹、產品單獨展示照
+         ==================================================================== -->
+    <section class="section" id="intro" aria-labelledby="intro-title">
+      <div class="container">
+        <div class="grid grid--2 reveal">
+          <div class="media">
+            <div class="media-placeholder media-placeholder--tall">
+              <span class="media-placeholder__label">產品單獨展示照</span>
+              <span class="media-placeholder__spec">寬 1200–1600px／透明底 PNG 優先</span>
+            </div>
+          </div>
+
+          <div>
+            <p class="eyebrow">關於產品</p>
+            <h2 id="intro-title">一句話點出產品定位</h2>
+            <p class="section-lead">
+              產品簡短介紹，建議 50–100 字。說明產品是什麼、為誰而做、解決什麼問題，
+              語氣貼近目標客群，避免一次塞入所有規格細節，細節留給後面的區塊說明。
+            </p>
+            <p>
+              可再補一段延伸說明，例如研發背景、品牌堅持、與市售同類產品的差異。
+              這段建議控制在 80 字以內，讓版面保持呼吸感。
+            </p>
+
+            <ul class="fact-list">
+              <li>
+                <span class="fact-list__value">數據一</span>
+                <span class="fact-list__label">說明文字</span>
+              </li>
+              <li>
+                <span class="fact-list__value">數據二</span>
+                <span class="fact-list__label">說明文字</span>
+              </li>
+              <li>
+                <span class="fact-list__value">數據三</span>
+                <span class="fact-list__label">說明文字</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          <span class="note__title">此區塊需要的內容</span>
+          <ul>
+            <li>產品簡短介紹 50–100 字</li>
+            <li>延伸說明 1 段，80 字以內（研發背景、品牌堅持或市場差異）</li>
+            <li>產品單獨展示照 1 張，寬度 1200–1600px，透明底 PNG 優先</li>
+            <li>三組可量化的數據或標章（例如「10 種營養素」「SGS 檢驗合格」），沒有可整組刪除</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         主要特點與功效
+         需要素材：3–4 個特點，每個含示意圖、標題、說明文字
+         ==================================================================== -->
+    <section class="section section--soft" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow">主要特點</p>
+          <h2 id="features-title">產品能為你做到的三件事</h2>
+          <p class="section-lead">
+            用一句話總結整體功效，建議 20–35 字，帶出下方各項特點。
+          </p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card feature-card reveal">
+            <div class="feature-card__media">
+              <div class="media-placeholder media-placeholder--wide">
+                <span class="media-placeholder__label">特點示意圖 1</span>
+                <span class="media-placeholder__spec">寬 800–1200px</span>
+              </div>
+            </div>
+            <h3>特點標題一</h3>
+            <p>
+              說明這項特點帶來的實際好處，建議 40–60 字。
+              用使用者能感受到的結果來描述，而非只列成分或規格。
+            </p>
+          </article>
+
+          <article class="card feature-card reveal">
+            <div class="feature-card__media">
+              <div class="media-placeholder media-placeholder--wide">
+                <span class="media-placeholder__label">特點示意圖 2</span>
+                <span class="media-placeholder__spec">寬 800–1200px</span>
+              </div>
+            </div>
+            <h3>特點標題二</h3>
+            <p>
+              說明這項特點帶來的實際好處，建議 40–60 字。
+              若有具體數據或檢驗依據，可在此處補上以增加說服力。
+            </p>
+          </article>
+
+          <article class="card feature-card reveal">
+            <div class="feature-card__media">
+              <div class="media-placeholder media-placeholder--wide">
+                <span class="media-placeholder__label">特點示意圖 3</span>
+                <span class="media-placeholder__spec">寬 800–1200px</span>
+              </div>
+            </div>
+            <h3>特點標題三</h3>
+            <p>
+              說明這項特點帶來的實際好處，建議 40–60 字。
+              三個特點的字數盡量接近，卡片高度才會一致。
+            </p>
+          </article>
+        </div>
+
+        <div class="note">
+          <span class="note__title">此區塊需要的內容</span>
+          <ul>
+            <li>區塊標題與一句總結（20–35 字）</li>
+            <li>3–4 個主要特點或功效，每個包含標題（4–10 字）與說明（40–60 字）</li>
+            <li>每個特點對應 1 張示意圖或 icon，寬度 800–1200px，JPG 或 PNG</li>
+            <li>若特點超過 4 個，將 <code>grid--3</code> 改為 <code>grid--4</code> 即可排成四欄</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         成分與技術優勢
+         需要素材：主要成分列表、技術說明、認證標章
+         ==================================================================== -->
+    <section class="section" id="ingredients" aria-labelledby="ingredients-title">
+      <div class="container">
+        <div class="grid grid--2 reveal">
+          <div>
+            <p class="eyebrow">成分與技術</p>
+            <h2 id="ingredients-title">為什麼這個配方有效</h2>
+            <p class="section-lead">
+              用 40–60 字說明配方或技術的核心概念，例如獨家製程、專利成分、原料來源。
+            </p>
+
+            <dl class="spec-list">
+              <div class="spec-list__row">
+                <dt>主要成分一</dt>
+                <dd>成分作用與含量說明，20–40 字。</dd>
+              </div>
+              <div class="spec-list__row">
+                <dt>主要成分二</dt>
+                <dd>成分作用與含量說明，20–40 字。</dd>
+              </div>
+              <div class="spec-list__row">
+                <dt>主要成分三</dt>
+                <dd>成分作用與含量說明，20–40 字。</dd>
+              </div>
+              <div class="spec-list__row">
+                <dt>技術優勢</dt>
+                <dd>製程、專利或認證說明，20–40 字。</dd>
+              </div>
+            </dl>
+
+            <ul class="badge-list">
+              <li>認證標章一</li>
+              <li>認證標章二</li>
+              <li>認證標章三</li>
+            </ul>
+          </div>
+
+          <div class="media">
+            <div class="media-placeholder media-placeholder--tall">
+              <span class="media-placeholder__label">成分或技術示意圖</span>
+              <span class="media-placeholder__spec">寬 800–1200px／JPG 或 PNG</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          <span class="note__title">此區塊需要的內容</span>
+          <ul>
+            <li>配方或技術核心概念說明 40–60 字</li>
+            <li>3–6 項主要成分，每項含名稱與作用說明（20–40 字）</li>
+            <li>技術優勢或製程說明（獨家製程、專利、原料產地）</li>
+            <li>認證標章圖檔（SGS、ISO、HACCP 等），透明底 PNG，高度 200px 以上</li>
+            <li>成分或技術示意圖 1 張，寬度 800–1200px</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         使用情境
+         需要素材：使用情境照 2–4 張，寬 1000–1600px，JPG
+         ==================================================================== -->
+    <section class="section section--soft" id="scenario" aria-labelledby="scenario-title">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow">使用情境</p>
+          <h2 id="scenario-title">什麼時候會用到</h2>
+          <p class="section-lead">
+            用 20–35 字說明適用場合，讓訪客把產品對應到自己的生活或工作情境。
+          </p>
+        </div>
+
+        <div class="gallery">
+          <figure class="gallery__item gallery__item--wide reveal">
+            <div class="media-placeholder media-placeholder--tall">
+              <span class="media-placeholder__label">使用情境照 1</span>
+              <span class="media-placeholder__spec">寬 1000–1600px／JPG</span>
+            </div>
+            <figcaption>情境說明一句話，15–25 字。</figcaption>
+          </figure>
+
+          <figure class="gallery__item reveal">
+            <div class="media-placeholder">
+              <span class="media-placeholder__label">使用情境照 2</span>
+              <span class="media-placeholder__spec">寬 1000–1600px／JPG</span>
+            </div>
+            <figcaption>情境說明一句話。</figcaption>
+          </figure>
+
+          <figure class="gallery__item reveal">
+            <div class="media-placeholder">
+              <span class="media-placeholder__label">使用情境照 3</span>
+              <span class="media-placeholder__spec">寬 1000–1600px／JPG</span>
+            </div>
+            <figcaption>情境說明一句話。</figcaption>
+          </figure>
+        </div>
+
+        <div class="note">
+          <span class="note__title">此區塊需要的內容</span>
+          <ul>
+            <li>使用情境照 2–4 張，寬度 1000–1600px，JPG</li>
+            <li>每張照片一句情境說明，15–25 字</li>
+            <li>照片建議含人物或實際使用畫面，比單純產品照更有帶入感</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         使用方法與建議用量
+         需要素材：3–4 個步驟、建議用量與使用頻率
+         ==================================================================== -->
+    <section class="section" id="howto" aria-labelledby="howto-title">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow">使用方法</p>
+          <h2 id="howto-title">三個步驟輕鬆上手</h2>
+          <p class="section-lead">
+            用 20–35 字說明整體使用流程有多簡單，降低購買前的疑慮。
+          </p>
+        </div>
+
+        <ol class="steps">
+          <li class="steps__item reveal">
+            <span class="steps__num">1</span>
+            <h3>步驟一標題</h3>
+            <p>步驟說明 30–50 字，寫清楚實際動作，避免抽象描述。</p>
+          </li>
+          <li class="steps__item reveal">
+            <span class="steps__num">2</span>
+            <h3>步驟二標題</h3>
+            <p>步驟說明 30–50 字，若有時間或份量條件請一併寫出。</p>
+          </li>
+          <li class="steps__item reveal">
+            <span class="steps__num">3</span>
+            <h3>步驟三標題</h3>
+            <p>步驟說明 30–50 字，可補充完成後的預期結果。</p>
+          </li>
+        </ol>
+
+        <div class="dosage reveal">
+          <h3 class="dosage__title">建議用量</h3>
+          <div class="grid grid--3">
+            <div class="dosage__item">
+              <span class="dosage__label">適用對象一</span>
+              <span class="dosage__value">每日 X 份</span>
+            </div>
+            <div class="dosage__item">
+              <span class="dosage__label">適用對象二</span>
+              <span class="dosage__value">每日 X 份</span>
+            </div>
+            <div class="dosage__item">
+              <span class="dosage__label">建議頻率</span>
+              <span class="dosage__value">持續 X 週</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          <span class="note__title">此區塊需要的內容</span>
+          <ul>
+            <li>3–4 個使用步驟，每步含標題（4–10 字）與說明（30–50 字）</li>
+            <li>建議用量：依對象、體重或機台類型區分的份量對照</li>
+            <li>建議使用頻率與建議持續期間</li>
+            <li>如需步驟示意圖，可在每個步驟內加入寬 800px 的小圖</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         注意事項與適用範圍
+         需要素材：適用範圍、警語、保存方式
+         ==================================================================== -->
+    <section class="section section--brand" id="notice" aria-labelledby="notice-title">
+      <div class="container container--narrow">
+        <div class="section-head reveal">
+          <p class="eyebrow">注意事項</p>
+          <h2 id="notice-title">使用前請詳閱</h2>
+        </div>
+
+        <div class="grid grid--2 reveal">
+          <div class="notice-block">
+            <h3>適用範圍</h3>
+            <ul>
+              <li>適用對象或適用機台類型說明。</li>
+              <li>可搭配或不可搭配的使用條件。</li>
+              <li>其他適用性補充。</li>
+            </ul>
+          </div>
+
+          <div class="notice-block">
+            <h3>使用警語</h3>
+            <ul>
+              <li>特定族群請先諮詢專業人士。</li>
+              <li>如有不適請立即停止使用。</li>
+              <li>請放置於孩童無法取得處。</li>
+            </ul>
+          </div>
+
+          <div class="notice-block">
+            <h3>保存方式</h3>
+            <ul>
+              <li>請置於陰涼乾燥處，避免陽光直射。</li>
+              <li>開封後建議於 X 個月內使用完畢。</li>
+            </ul>
+          </div>
+
+          <div class="notice-block">
+            <h3>安全性說明</h3>
+            <ul>
+              <li>檢驗報告或安全認證說明。</li>
+              <li>成分過敏原標示。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          <span class="note__title">此區塊需要的內容</span>
+          <ul>
+            <li>適用範圍：適用對象、適用機台類型或使用條件</li>
+            <li>使用警語：不適用族群、停用時機、法規要求的必要標示</li>
+            <li>保存方式：溫度、避光條件、開封後保存期限</li>
+            <li>安全性說明：檢驗報告、認證、過敏原標示</li>
+            <li>食品、醫材、化粧品類請確認文案符合主管機關廣告規範</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         常見問題與退換貨說明
+         使用原生 <details>，未載入 JS 也能正常展開
+         ==================================================================== -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container container--narrow">
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow">常見問題</p>
+          <h2 id="faq-title">購買前你可能想知道</h2>
+          <p class="section-lead">
+            把客服最常被問到的問題放在這裡，能有效降低諮詢量並提高轉換率。
+          </p>
+        </div>
+
+        <div class="faq reveal">
+          <details class="faq__item">
+            <summary>問題一：關於產品本身的常見疑問？</summary>
+            <div class="faq__body">
+              <p>回答 50–120 字。先給明確結論，再補充說明，避免模稜兩可的用語。</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>問題二：多久會看到效果／多久會出貨？</summary>
+            <div class="faq__body">
+              <p>回答 50–120 字。涉及時間的問題請給明確區間，並註明影響因素。</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>問題三：可以和其他產品一起使用嗎？</summary>
+            <div class="faq__body">
+              <p>回答 50–120 字。若有禁忌組合，請明確列出。</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>退換貨說明：鑑賞期與退貨條件</summary>
+            <div class="faq__body">
+              <p>
+                依照消費者保護法規定，消費者享有商品到貨 7 天鑑賞期（包含例假日）之權益。
+                七日鑑賞期屬「考慮期」並非「試用期」，若商品經拆封、使用，以致缺乏完整性
+                而失去再販售價值時，恕無法退貨。
+              </p>
+              <p><strong>無法受理退貨的情況：</strong></p>
+              <ul>
+                <li>超過 7 天鑑賞期。</li>
+                <li>商品配件不全或已拆封（請務必退回所有包裝配件）。</li>
+                <li>商品有明顯使用痕跡、損壞或人為造成的髒污、毀損。</li>
+              </ul>
+              <p>
+                <strong>瑕疵定義：</strong>大範圍破損或髒污、版型歪斜等嚴重影響使用之異常狀況。
+                細小線頭或微點、尺寸 ±5% 誤差內、運送擠壓皺摺皆屬正常，非屬瑕疵範圍。
+              </p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>退換貨流程與退款時程</summary>
+            <div class="faq__body">
+              <p>
+                請透過客服管道告知退換貨商品，附上收件人姓名、產品照片與退換原因，
+                並提供收貨地址及電話。如為商品瑕疵，請一併提供瑕疵照片，
+                我們確認後會協助處理退款或寄送換貨商品。
+              </p>
+              <p>
+                退貨需求成立後，我們將在收到退貨商品後的 7 個工作天內進行退款。
+                信用卡付款將進行退刷，ATM 轉帳將取消轉帳；
+                各銀行退款規範不同，實際入帳時間請與發卡銀行確認。
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <div class="note">
+          <span class="note__title">此區塊需要的內容</span>
+          <ul>
+            <li>3–6 組常見問答，每組問題 10–20 字、回答 50–120 字</li>
+            <li>退換貨政策：鑑賞期天數、可退與不可退條件、瑕疵定義</li>
+            <li>退換貨流程：聯絡方式、需提供的資料、寄回地址</li>
+            <li>退款時程：處理工作天數、各付款方式的退款方式</li>
+            <li>上方退換貨條文為通用範本，請依實際政策與法務確認後調整</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         行動呼籲 CTA
+         需要素材：包裝或桶裝細節照、購買連結、LINE、電話
+         ==================================================================== -->
+    <section class="section section--dark" id="cta" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="grid grid--2 reveal">
+          <div>
+            <p class="eyebrow">立即行動</p>
+            <h2 id="cta-title">準備好開始了嗎</h2>
+            <p class="section-lead">
+              用 25–40 字做最後推力，可加入限時優惠、免運門檻或贈品資訊，
+              並明確告訴訪客下一步該做什麼。
+            </p>
+
+            <div class="btn-group">
+              <a class="btn btn--accent" href="#" target="_blank" rel="noopener">前往購買</a>
+              <a class="btn btn--outline btn--on-dark" href="#" target="_blank" rel="noopener">加入 LINE 詢問</a>
+            </div>
+
+            <p class="cta__hint">滿額免運與優惠說明可寫在這裡。</p>
+          </div>
+
+          <div>
+            <div class="media-placeholder">
+              <span class="media-placeholder__label">包裝或桶裝細節照</span>
+              <span class="media-placeholder__spec">寬 800–1200px／JPG（2–3 張）</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          <span class="note__title">此區塊需要的內容</span>
+          <ul>
+            <li>行動呼籲文案 25–40 字（限時優惠、免運門檻、贈品）</li>
+            <li>購買連結網址（電商平台、蝦皮、官方商店等）</li>
+            <li>LINE 官方帳號連結、客服電話</li>
+            <li>包裝或桶裝細節照 2–3 張，寬度 800–1200px，JPG</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         聯絡資訊
+         需要素材：公司全名、統編、地址、電話、Email、LINE
+         ==================================================================== -->
+    <section class="section section--soft" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow">聯絡我們</p>
+          <h2 id="contact-title">有任何問題歡迎與我們聯繫</h2>
+          <p class="section-lead">服務時間：週一至週五 09:00–18:00</p>
+        </div>
+
+        <div class="grid grid--4 reveal">
+          <div class="contact-card">
+            <h3>電話</h3>
+            <p><a href="tel:+886000000000">(0X) XXXX-XXXX</a></p>
+          </div>
+
+          <div class="contact-card">
+            <h3>Email</h3>
+            <p><a href="mailto:service@example.com">service@example.com</a></p>
+          </div>
+
+          <div class="contact-card">
+            <h3>LINE 官方帳號</h3>
+            <p><a href="#" target="_blank" rel="noopener">@youraccount</a></p>
+          </div>
+
+          <div class="contact-card">
+            <h3>地址</h3>
+            <p>XXX 縣市 XXX 區 XXX 路 XX 號 X 樓</p>
+          </div>
+        </div>
+
+        <div class="note">
+          <span class="note__title">此區塊需要的內容</span>
+          <ul>
+            <li>公司全名與統一編號</li>
+            <li>公司地址（如有實體門市請一併提供）</li>
+            <li>客服電話與服務時間</li>
+            <li>客服 Email</li>
+            <li>LINE 官方帳號 ID 與加入連結</li>
+            <li>社群連結（Facebook、Instagram），沒有可刪除</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================================
+       Footer
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <span class="site-logo__text">品牌名稱</span>
+        <p>公司全名：XXXXX 有限公司</p>
+        <p>統一編號：00000000</p>
+        <p>地址：XXX 縣市 XXX 區 XXX 路 XX 號</p>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="頁尾導覽">
+        <ul>
+          <li><a href="#intro">產品介紹</a></li>
+          <li><a href="#features">特點功效</a></li>
+          <li><a href="#howto">使用方法</a></li>
+          <li><a href="#faq">常見問題</a></li>
+          <li><a href="#contact">聯絡我們</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container site-footer__bottom">
+      <p>&copy; <span id="year">2026</span> 品牌名稱. All rights reserved.</p>
+      <p><a href="#top">回到頂端</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# 圖片素材放置處
+#
+# 建議命名與規格：
+#   hero.jpg              首屏主視覺   寬 1920–2400px  JPG / WebP
+#   product-01.png        產品展示照   寬 1200–1600px  透明底 PNG 優先
+#   feature-01.jpg        特點示意圖   寬 800–1200px   JPG / PNG
+#   scene-01.jpg          使用情境照   寬 1000–1600px  JPG
+#   package-01.jpg        包裝細節照   寬 800–1200px   JPG
+#   logo.svg              品牌 Logo    寬 1000px 以上  SVG / 透明底 PNG
+#   og-image.jpg          社群分享圖   1200x630px      JPG
