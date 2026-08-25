@@ -1,0 +1,343 @@
+/* ==========================================================================
+   版面與共用元件 Layout：container、section、按鈕、網格、提示區塊
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+.container--narrow {
+  max-width: var(--container-narrow);
+}
+
+.section {
+  padding-block: var(--section-padding-y);
+  /* 錨點捲動時避開固定 Header */
+  scroll-margin-top: var(--header-height);
+}
+
+.section--soft {
+  background-color: var(--color-bg-soft);
+}
+
+.section--brand {
+  background-color: var(--color-brand-light);
+}
+
+.section--dark {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-inverse);
+}
+
+.section--dark h2,
+.section--dark h3 {
+  color: var(--color-text-inverse);
+}
+
+/* --- 區塊標題 ------------------------------------------------------------ */
+
+.section-head {
+  max-width: 720px;
+  margin-bottom: var(--space-7);
+}
+
+.section-head--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: var(--space-3);
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-brand);
+  background-color: var(--color-brand-light);
+  border-radius: var(--radius-full);
+}
+
+.section--dark .eyebrow {
+  color: var(--color-accent);
+  background-color: rgba(217, 139, 60, 0.16);
+}
+
+.section-lead {
+  font-size: var(--fs-lg);
+  color: var(--color-text-muted);
+}
+
+.section--dark .section-lead {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* --- 按鈕 ---------------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--fs-base);
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  border: 2px solid transparent;
+  border-radius: var(--radius-full);
+  transition: background-color var(--transition-fast),
+    border-color var(--transition-fast), color var(--transition-fast),
+    transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn--primary {
+  color: var(--color-text-inverse);
+  background-color: var(--color-brand);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--primary:hover {
+  color: var(--color-text-inverse);
+  background-color: var(--color-brand-dark);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn--accent {
+  color: var(--color-text-inverse);
+  background-color: var(--color-accent);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--accent:hover {
+  color: var(--color-text-inverse);
+  filter: brightness(0.94);
+}
+
+.btn--outline {
+  color: var(--color-brand);
+  border-color: currentColor;
+  background-color: transparent;
+}
+
+.btn--outline:hover {
+  color: var(--color-text-inverse);
+  background-color: var(--color-brand);
+  border-color: var(--color-brand);
+}
+
+.btn--on-dark {
+  color: var(--color-text-inverse);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.btn--on-dark:hover {
+  color: var(--color-bg-dark);
+  background-color: var(--color-text-inverse);
+  border-color: var(--color-text-inverse);
+}
+
+.btn--sm {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--fs-sm);
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.btn-group--center {
+  justify-content: center;
+}
+
+/* --- 網格 ---------------------------------------------------------------- */
+
+.grid {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.grid--2 {
+  grid-template-columns: 1fr;
+}
+
+.grid--3 {
+  grid-template-columns: 1fr;
+}
+
+.grid--4 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .grid--3,
+  .grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-7);
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* --- 卡片 ---------------------------------------------------------------- */
+
+.card {
+  padding: var(--space-6);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.card h3 {
+  margin-bottom: var(--space-3);
+}
+
+.card p {
+  color: var(--color-text-muted);
+}
+
+/* --- 圖片佔位框 ----------------------------------------------------------
+   置換為實際圖片時，將整個 .media-placeholder 換成 <img> 即可。
+-------------------------------------------------------------------------- */
+
+.media {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.media-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-6);
+  min-height: 220px;
+  text-align: center;
+  color: var(--color-text-muted);
+  background: repeating-linear-gradient(
+    45deg,
+    var(--color-bg-soft),
+    var(--color-bg-soft) 12px,
+    #eef2f0 12px,
+    #eef2f0 24px
+  );
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.media-placeholder__label {
+  font-size: var(--fs-base);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.media-placeholder__spec {
+  font-size: var(--fs-xs);
+  line-height: var(--lh-snug);
+}
+
+.media-placeholder--tall {
+  min-height: 320px;
+}
+
+.media-placeholder--wide {
+  min-height: 180px;
+}
+
+/* --- 素材說明提示區塊 ----------------------------------------------------
+   給填內容的人看的說明，正式上線前可整批刪除，
+   或在 <body> 加上 class="is-live" 一次隱藏全部。
+-------------------------------------------------------------------------- */
+
+.note {
+  margin-top: var(--space-5);
+  padding: var(--space-4) var(--space-5);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-snug);
+  color: var(--color-note-text);
+  background-color: var(--color-note-bg);
+  border: 1px solid var(--color-note-border);
+  border-left-width: 4px;
+  border-radius: var(--radius-sm);
+}
+
+.note__title {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-weight: 700;
+}
+
+.note ul {
+  margin: 0;
+  padding-left: 1.1em;
+}
+
+.note li + li {
+  margin-top: var(--space-1);
+}
+
+.is-live .note,
+.is-live .media-placeholder {
+  display: none;
+}
+
+/* --- 進場動畫 ------------------------------------------------------------ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

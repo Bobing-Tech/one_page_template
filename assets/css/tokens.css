@@ -1,0 +1,101 @@
+/* ==========================================================================
+   設計變數 Design Tokens
+   更換品牌配色時，只需修改此檔案的色彩變數即可套用至全站。
+   ========================================================================== */
+
+:root {
+  /* --- 品牌色彩 ---------------------------------------------------------
+     請將 --color-brand 換成品牌主色碼（例如 #1A73E8）。
+     --color-brand-dark 建議為主色加深約 12%，用於 hover 狀態。
+     --color-accent 為輔助強調色，用於標籤、數字、重點文字。
+  ---------------------------------------------------------------------- */
+  --color-brand: #2f6f4e;
+  --color-brand-dark: #24563d;
+  --color-brand-light: #e8f2ec;
+  --color-accent: #d98b3c;
+  --color-accent-light: #fdf3e8;
+
+  /* --- 中性色 --- */
+  --color-text: #1f2421;
+  --color-text-muted: #5b6661;
+  --color-text-inverse: #ffffff;
+  --color-bg: #ffffff;
+  --color-bg-soft: #f6f8f7;
+  --color-bg-dark: #1f2421;
+  --color-border: #e2e8e5;
+
+  /* --- 提示區塊（上線前移除 .note 元素時一併停用） --- */
+  --color-note-bg: #fff9e6;
+  --color-note-border: #f0d68a;
+  --color-note-text: #7a5c14;
+
+  /* --- 字體 -------------------------------------------------------------
+     若品牌有指定字體，將字體名稱加在 --font-sans 最前方即可。
+  ---------------------------------------------------------------------- */
+  --font-sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei",
+    -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* --- 字級（clamp 使字級隨視窗寬度平滑縮放） --- */
+  --fs-xs: 0.8125rem;
+  --fs-sm: 0.9375rem;
+  --fs-base: 1rem;
+  --fs-lg: clamp(1.0625rem, 0.4vw + 0.95rem, 1.1875rem);
+  --fs-xl: clamp(1.25rem, 0.7vw + 1.05rem, 1.5rem);
+  --fs-2xl: clamp(1.5rem, 1.3vw + 1.2rem, 2rem);
+  --fs-3xl: clamp(1.875rem, 2.2vw + 1.35rem, 2.75rem);
+  --fs-4xl: clamp(2.25rem, 4vw + 1.3rem, 4rem);
+
+  --lh-tight: 1.25;
+  --lh-snug: 1.45;
+  --lh-normal: 1.75;
+
+  /* --- 間距 --- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+
+  /* --- 區塊上下留白（隨視窗縮放） --- */
+  --section-padding-y: clamp(3.5rem, 7vw, 6.5rem);
+
+  /* --- 圓角與陰影 --- */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(31, 36, 33, 0.06);
+  --shadow-md: 0 6px 18px rgba(31, 36, 33, 0.08);
+  --shadow-lg: 0 18px 40px rgba(31, 36, 33, 0.12);
+
+  /* --- 版面 --- */
+  --container-max: 1200px;
+  --container-narrow: 820px;
+  --container-padding: clamp(1rem, 4vw, 2.5rem);
+  --header-height: 64px;
+
+  /* --- 動態 --- */
+  --transition-fast: 150ms ease;
+  --transition-base: 260ms ease;
+
+  --z-header: 100;
+  --z-menu: 200;
+}
+
+/* RWD 斷點（供對照，CSS 變數無法用於 media query 條件）
+   sm: 640px   手機橫向
+   md: 768px   平板／漢堡選單切換點
+   lg: 1024px  小筆電
+   xl: 1280px  桌機
+*/
+
+@media (min-width: 768px) {
+  :root {
+    --header-height: 76px;
+  }
+}
