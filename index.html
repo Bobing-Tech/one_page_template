@@ -60,7 +60,7 @@
           <li><a href="#intro">產品介紹</a></li>
           <li><a href="#features">特點功效</a></li>
           <li><a href="#ingredients">技術規格</a></li>
-          <li><a href="#howto">使用方法</a></li>
+          <li><a href="#howto">作業流程</a></li>
           <li><a href="#faq">常見問題</a></li>
           <li><a href="#contact">聯絡我們</a></li>
         </ul>
@@ -235,6 +235,14 @@
                 <dd>正常操作後 pH 逐漸升高，以硝酸調整至 1.5–2.5。</dd>
               </div>
               <div class="spec-list__row">
+                <dt>剝離時間</dt>
+                <dd>約為電鍍時間的 1/10，實際依掛具數量、鍍層厚度及電流狀況調整。</dd>
+              </div>
+              <div class="spec-list__row">
+                <dt>槽液補充</dt>
+                <dd>液位下降時以藥水與水 1:1 補充；淤泥累積至影響掛具時進行清槽。</dd>
+              </div>
+              <div class="spec-list__row">
                 <dt>適用鍍層</dt>
                 <dd>可去除掛具表面銅、鎳等金屬鍍層，適用不鏽鋼線及鈦線掛具。</dd>
               </div>
@@ -299,33 +307,153 @@
     </section>
 
     <!-- ====================================================================
-         使用方法與建議用量
+         產線作業流程
+         照片檔名目前沿用客戶原始檔（大寫 .JPG）。
+         GitHub Pages 的路徑區分大小寫，日後若改成小寫或語意化檔名
+         （例如 step-01-rack-loading.jpg），請一併更新下方的 src。
          ==================================================================== -->
     <section class="section" id="howto" aria-labelledby="howto-title">
       <div class="container">
         <div class="section-head section-head--center reveal">
-          <p class="eyebrow">使用方法</p>
-          <h2 id="howto-title">建浴、電解、取出確認</h2>
+          <p class="eyebrow">作業流程</p>
+          <h2 id="howto-title">產線實際作業流程</h2>
           <p class="section-lead">
-            可依現場掛具數量、鍍層厚度及電流狀況調整操作時間。
+            從掛具置放到槽液維護，可配合現場吊掛系統與電解設備進行批次處理。
           </p>
         </div>
 
-        <ol class="steps">
-          <li class="steps__item reveal">
-            <span class="steps__num">1</span>
-            <h3>建浴調配</h3>
-            <p>以 2000 kg 建浴為例，加入 1000 kg NPRE-3 與 1000 kg 水，完成後添加約 3% 硝酸，並依實際 pH 值調整。</p>
+        <div class="brew-card reveal">
+          <span class="brew-card__label">導入前</span>
+          <h3>建浴配方</h3>
+          <p>
+            以 2000 kg 建浴為例，加入 1000 kg NPRE-3 與 1000 kg 水，
+            完成建浴後添加約 3% 硝酸，並依實際 pH 值調整。
+          </p>
+          <ul class="brew-card__formula">
+            <li>
+              <span>NPRE-3</span>
+              <strong>1000 kg</strong>
+            </li>
+            <li>
+              <span>水</span>
+              <strong>1000 kg</strong>
+            </li>
+            <li>
+              <span>硝酸</span>
+              <strong>約 3%</strong>
+            </li>
+            <li>
+              <span>建浴 pH</span>
+              <strong>1–2</strong>
+            </li>
+          </ul>
+        </div>
+
+        <ol class="process">
+          <li class="process__row reveal">
+            <div class="process__body">
+              <span class="process__num">01</span>
+              <h3>置放掛具、拉入剝離槽</h3>
+              <p>
+                處理對象為不鏽鋼線及鈦線掛具。掛具置放完成後，
+                操作吊具機將整排掛具拉入剝離槽。
+              </p>
+            </div>
+            <div class="process__media">
+              <div class="process-figures">
+                <figure>
+                  <img src="assets/images/1.JPG"
+                       alt="不鏽鋼線與鈦線掛具吊掛於退電產線，準備進行剝離作業"
+                       width="1884" height="869" loading="lazy">
+                  <figcaption>待處理掛具吊掛於產線，表面可見銅、鎳鍍層。</figcaption>
+                </figure>
+              </div>
+            </div>
           </li>
-          <li class="steps__item reveal">
-            <span class="steps__num">2</span>
-            <h3>連接電解</h3>
-            <p>陰極連接不鏽鋼極板，陽極連接待處理掛具，操作電壓設定於 8–10V。</p>
+
+          <li class="process__row reveal">
+            <div class="process__body">
+              <span class="process__num">02</span>
+              <h3>連接電極、設定操作電壓</h3>
+              <p>
+                陰極連接不鏽鋼極板，陽極連接待處理掛具。本案例操作電壓設定於 8–10V。
+                建浴後 pH 約為 1–2，正常操作後 pH 會逐漸升高，以硝酸調整至 1.5–2.5。
+                實際操作時間依掛具數量、鍍層厚度及電流狀況調整。
+              </p>
+            </div>
+            <div class="process__media">
+              <div class="process-figures process-figures--duo">
+                <figure>
+                  <img src="assets/images/2-1.JPG"
+                       alt="操作人員以吊具機控制器將掛具拉入剝離槽"
+                       width="1884" height="869" loading="lazy">
+                  <figcaption>操作吊具機將掛具移入剝離槽。</figcaption>
+                </figure>
+                <figure>
+                  <img src="assets/images/2-2.JPG"
+                       alt="剝離槽極板與導電銅排連接處特寫"
+                       width="1884" height="869" loading="lazy">
+                  <figcaption>極板與導電銅排連接處。</figcaption>
+                </figure>
+              </div>
+            </div>
           </li>
-          <li class="steps__item reveal">
-            <span class="steps__num">3</span>
-            <h3>監控取出</h3>
-            <p>操作中以硝酸將 pH 維持於 1.5–2.5，完成剝離後取出掛具並確認鍍層剝離狀況。</p>
+
+          <li class="process__row reveal">
+            <div class="process__body">
+              <span class="process__num">03</span>
+              <h3>電解剝離、移槽清洗</h3>
+              <p>
+                剝離完畢後，操作吊具機將掛具拉入隔壁清洗槽浸泡即可，
+                再拉起回原位置入新的待剝離掛具，形成連續作業循環。
+              </p>
+              <p class="process__highlight">
+                剝離時間約為電鍍時間的 <strong>1/10</strong>
+              </p>
+            </div>
+            <div class="process__media">
+              <div class="process-figures process-figures--trio">
+                <figure class="process-figures__main">
+                  <img src="assets/images/3-3.JPG"
+                       alt="剝離完成後以吊具機將掛具自剝離槽拉起"
+                       width="1884" height="869" loading="lazy">
+                  <figcaption>剝離完畢後拉起掛具，準備移入清洗槽。</figcaption>
+                </figure>
+                <figure>
+                  <img src="assets/images/3-1.JPG"
+                       alt="掛具浸入剝離槽中進行電解剝離"
+                       width="1884" height="869" loading="lazy">
+                  <figcaption>電解剝離進行中。</figcaption>
+                </figure>
+                <figure>
+                  <img src="assets/images/3-2.JPG"
+                       alt="剝離槽與相鄰清洗槽的槽區配置"
+                       width="1884" height="869" loading="lazy">
+                  <figcaption>隔壁清洗槽供浸泡使用。</figcaption>
+                </figure>
+              </div>
+            </div>
+          </li>
+
+          <li class="process__row reveal">
+            <div class="process__body">
+              <span class="process__num">04</span>
+              <h3>槽液維護</h3>
+              <p>
+                液位下降時，以藥水與水 1:1 的比例補充。
+                槽底淤泥累積至影響掛具作業時，即進行清槽。
+              </p>
+            </div>
+            <div class="process__media">
+              <div class="process-figures">
+                <figure>
+                  <img src="assets/images/4.JPG"
+                       alt="剝離槽槽液液位與槽體狀況"
+                       width="1884" height="869" loading="lazy">
+                  <figcaption>定期確認液位與槽底淤泥累積狀況。</figcaption>
+                </figure>
+              </div>
+            </div>
           </li>
         </ol>
 
@@ -345,6 +473,10 @@
               <span class="dosage__value">約 150–200A</span>
             </div>
           </div>
+          <p class="disclaimer">
+            以上為特定客戶實際操作案例之條件。實際電壓、電流與操作時間會因掛具材質、
+            鍍層種類與厚度、掛具數量及槽體設備規格而有所不同，建議導入前先進行小批試作。
+          </p>
         </div>
       </div>
     </section>
@@ -466,7 +598,7 @@
 
             <div class="btn-group">
               <a class="btn btn--accent" href="tel:+886425673052">立即來電</a>
-              <a class="btn btn--outline btn--on-dark" href="#howto">查看使用方法</a>
+              <a class="btn btn--outline btn--on-dark" href="#howto">查看作業流程</a>
             </div>
 
             <p class="cta__hint">歡迎來電 (04) 2567-3052，實際電流與處理時間可依現場條件調整。</p>
@@ -530,7 +662,7 @@
         <ul>
           <li><a href="#intro">產品介紹</a></li>
           <li><a href="#features">特點功效</a></li>
-          <li><a href="#howto">使用方法</a></li>
+          <li><a href="#howto">作業流程</a></li>
           <li><a href="#faq">常見問題</a></li>
           <li><a href="#contact">聯絡我們</a></li>
         </ul>

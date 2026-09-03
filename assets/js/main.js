@@ -5,6 +5,10 @@
 (function () {
   "use strict";
 
+  var prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
   /* --- 行動版漢堡選單 --- */
   var header = document.getElementById("site-header");
   var toggle = document.querySelector(".nav-toggle");
@@ -26,7 +30,27 @@
     });
 
     nav.addEventListener("click", function (event) {
-      if (event.target.closest("a")) setMenu(false);
+      var link = event.target.closest("a");
+      if (!link) return;
+
+      var href = link.getAttribute("href");
+      var isAnchor = href && href.charAt(0) === "#" && href.length > 1;
+      var target = isAnchor ? document.querySelector(href) : null;
+
+      setMenu(false);
+
+      // tel: 等外部連結維持原生行為
+      if (!target) return;
+
+      // body 解除鎖定捲動後再捲，否則 iOS Safari 會中斷平滑捲動
+      event.preventDefault();
+      requestAnimationFrame(function () {
+        target.scrollIntoView({
+          behavior: prefersReducedMotion ? "auto" : "smooth",
+          block: "start"
+        });
+        history.pushState(null, "", href);
+      });
     });
 
     if (backdrop) {
@@ -53,10 +77,6 @@
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
   }
-
-  var prefersReducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches;
 
   /* --- 區塊進場淡入 --- */
   var revealItems = document.querySelectorAll(".reveal");
