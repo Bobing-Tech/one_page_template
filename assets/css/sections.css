@@ -316,6 +316,14 @@ body.nav-open {
   color: var(--color-text-inverse);
 }
 
+.hero__media img {
+  width: 100%;
+  display: block;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  background-color: var(--color-bg);
+}
+
 .hero .note {
   position: relative;
   z-index: 1;
@@ -396,6 +404,13 @@ body.nav-open {
   border-radius: var(--radius-md);
 }
 
+.feature-card__media img.diagram {
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+}
+
 /* --- 成分與技術：規格清單與標章 ------------------------------------------- */
 
 .spec-list {
@@ -470,6 +485,13 @@ body.nav-open {
   box-shadow: var(--shadow-md);
 }
 
+.gallery__item img.diagram {
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+}
+
 .gallery__item figcaption {
   margin-top: var(--space-3);
   font-size: var(--fs-sm);
@@ -490,6 +512,11 @@ body.nav-open {
   .gallery__item--wide .media-placeholder {
     height: calc(100% - 2.5rem);
     aspect-ratio: auto;
+  }
+
+  .gallery__item--wide img.diagram {
+    height: auto;
+    aspect-ratio: 3 / 2;
   }
 }
 
@@ -705,6 +732,10 @@ body.nav-open {
   box-shadow: var(--shadow-md);
 }
 
+.process-figures img.diagram {
+  background-color: var(--color-bg);
+}
+
 .process-figures figcaption {
   margin-top: var(--space-2);
   font-size: var(--fs-xs);
@@ -722,6 +753,25 @@ body.nav-open {
   .process-figures--trio .process-figures__main {
     grid-column: 1 / -1;
   }
+}
+
+.process-diagram {
+  margin: var(--space-8) 0 0;
+}
+
+.process-diagram img {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  background-color: var(--color-bg);
+}
+
+.process-diagram figcaption {
+  margin-top: var(--space-3);
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
 }
 
 @media (min-width: 1024px) {
@@ -856,6 +906,13 @@ body.nav-open {
 
 .section--dark .media-placeholder__label {
   color: var(--color-text-inverse);
+}
+
+.section--dark .media img {
+  width: 100%;
+  max-height: 28rem;
+  object-fit: cover;
+  object-position: center 20%;
 }
 
 /* --- 聯絡資訊 ------------------------------------------------------------ */

@@ -243,6 +243,20 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+}
+
+/* 示意圖需完整顯示文字標註，不可裁切 */
+.media--diagram {
+  background-color: var(--color-bg);
+}
+
+.media--diagram img,
+img.diagram {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background-color: var(--color-bg);
 }
 
 .media-placeholder {
