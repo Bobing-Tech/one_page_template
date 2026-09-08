@@ -389,26 +389,122 @@ body.nav-open {
   height: 100%;
 }
 
-.feature-card__media {
+.feature-card h3 {
+  padding-top: var(--space-1);
+}
+
+/* --- 製程比較表 ---------------------------------------------------------- */
+
+.compare {
+  margin-top: var(--space-8);
+}
+
+.compare__title {
   margin-bottom: var(--space-5);
+  text-align: center;
 }
 
-.feature-card__media .media-placeholder {
-  min-height: 150px;
-}
-
-.feature-card__media img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: var(--radius-md);
-}
-
-.feature-card__media img.diagram {
-  aspect-ratio: 3 / 2;
-  object-fit: contain;
-  border: 1px solid var(--color-border);
+.compare__scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
   background-color: var(--color-bg);
+}
+
+.compare-table {
+  width: 100%;
+  min-width: 40rem;
+  border-collapse: collapse;
+  font-size: var(--fs-sm);
+}
+
+.compare-table th,
+.compare-table td {
+  padding: var(--space-4) var(--space-5);
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.compare-table thead th {
+  font-size: var(--fs-base);
+  font-weight: 700;
+  color: var(--color-text);
+  background-color: var(--color-bg-soft);
+}
+
+.compare-table thead th:first-child {
+  width: 18%;
+}
+
+.compare-table tbody th {
+  font-weight: 700;
+  color: var(--color-brand);
+  white-space: nowrap;
+  background-color: var(--color-bg);
+}
+
+.compare-table tbody td {
+  color: var(--color-text-muted);
+}
+
+.compare-table tbody tr:last-child th,
+.compare-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.compare-table__highlight,
+.compare-table td:last-child {
+  background-color: var(--color-brand-light);
+}
+
+.compare-table thead .compare-table__highlight {
+  color: var(--color-brand-dark);
+  background-color: var(--color-brand-light);
+}
+
+.compare-table tbody td:last-child {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+@media (max-width: 767px) {
+  .compare__scroll {
+    overflow: visible;
+  }
+
+  .compare-table {
+    min-width: 0;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: var(--fs-xs);
+    line-height: var(--lh-snug);
+  }
+
+  .compare-table th,
+  .compare-table td {
+    padding: 0.55rem 0.45rem;
+    overflow-wrap: anywhere;
+  }
+
+  .compare-table thead th {
+    position: sticky;
+    top: var(--header-height);
+    z-index: 1;
+    font-size: var(--fs-xs);
+    box-shadow: inset 0 -1px 0 var(--color-border);
+  }
+
+  .compare-table thead th:first-child {
+    width: 22%;
+  }
+
+  .compare-table tbody th {
+    white-space: normal;
+    width: 22%;
+  }
 }
 
 /* --- 成分與技術：規格清單與標章 ------------------------------------------- */
@@ -468,56 +564,26 @@ body.nav-open {
 /* --- 使用情境圖庫 --------------------------------------------------------- */
 
 .gallery {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-4);
-}
-
-.gallery__item {
   margin: 0;
 }
 
-.gallery__item img {
+.gallery img {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  display: block;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
 }
 
-.gallery__item img.diagram {
-  aspect-ratio: 3 / 2;
+.gallery img.diagram {
   object-fit: contain;
   background-color: var(--color-bg);
   border: 1px solid var(--color-border);
 }
 
-.gallery__item figcaption {
+.gallery figcaption {
   margin-top: var(--space-3);
   font-size: var(--fs-sm);
   color: var(--color-text-muted);
-}
-
-@media (min-width: 768px) {
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-5);
-  }
-
-  .gallery__item--wide {
-    grid-row: span 2;
-  }
-
-  .gallery__item--wide img,
-  .gallery__item--wide .media-placeholder {
-    height: calc(100% - 2.5rem);
-    aspect-ratio: auto;
-  }
-
-  .gallery__item--wide img.diagram {
-    height: auto;
-    aspect-ratio: 3 / 2;
-  }
 }
 
 /* --- 使用方法步驟 --------------------------------------------------------- */
@@ -888,6 +954,42 @@ body.nav-open {
 
 .faq__body ul {
   padding-left: 1.1em;
+}
+
+.data-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: var(--space-4);
+}
+
+.data-table {
+  width: 100%;
+  min-width: 36rem;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid var(--color-border);
+}
+
+.data-table thead th {
+  font-weight: 700;
+  color: var(--color-text);
+  background-color: var(--color-bg-soft);
+}
+
+.data-table tbody th {
+  font-weight: 700;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.data-table tbody td {
+  color: var(--color-text-muted);
 }
 
 /* --- 行動呼籲 ------------------------------------------------------------ */
